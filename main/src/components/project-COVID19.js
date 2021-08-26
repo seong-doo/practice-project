@@ -84,7 +84,7 @@ const Contents = () => {
 
     return (
         <section>
-          <h2>Main page</h2>
+          <h2> COVID-19 현황 차트 </h2>
           <div className="contents">
             <div>
               <Bar data={confirmedData} options={
