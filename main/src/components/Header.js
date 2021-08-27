@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
-import Covid from './project-COVID19'
-import MainPage from './mainPage'
-import Project from './projet'
+import Switch from './Switch'
 
 const Header = () => {
   const [getSelectOption, setGetSelectOption] = useState("Home")
+
+ 
 
     return (
       <div>
@@ -20,8 +20,9 @@ const Header = () => {
                 <option value = "project2">project2</option>
             </select>
         </header>
-        {getSelectOption === "project-COVID19" ? <Covid /> : <MainPage />}
-        {getSelectOption === "project2" ? <Project /> : <MainPage />}
+        <body>
+            <Switch props = {getSelectOption} />
+          </body>
         </div>
     
     )
