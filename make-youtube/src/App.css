@@ -15,7 +15,7 @@
 }
 
 .App-header {
-  padding: 1rem 2rem;
+  padding: 0rem 2rem;
   background: #1a1a1a;
   display: flex;
   justify-content: space-between;
@@ -63,3 +63,33 @@
   display: flex;
   
 }
+
+.mainHeader {
+  background: #1a1a1a;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+}
+
+.meunBar{
+  padding-right: 1.5rem;
+}
+
+.where {
+  display: block;
+  margin: 25px 15px;
+  font-size: 11px;
+  color: #000;
+  text-decoration: none;
+  font-family: verdana;
+  font-style: italic;
+}
+
+.textbox {
+  position: relative;
+  width: 30rem; 
+  margin: 15px;
+}
+
+
