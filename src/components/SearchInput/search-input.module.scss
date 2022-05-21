@@ -1,0 +1,106 @@
+@use 'src/styles/constants/colors';
+@use 'src/styles/mixins/responsive';
+
+.search-input {
+  display: flex;
+  width: 100%;
+
+  @include responsive.breakpoint {
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  .mobile-search-input {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 12px 20px;
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 1.6;
+    color: colors.$footer-text;
+    cursor: pointer;
+    background-color: colors.$white;
+    border-radius: 42px;
+
+    @include responsive.breakpoint {
+      display: none;
+    }
+  }
+
+  .mobile-container {
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    background-color: colors.$white;
+
+    @include responsive.breakpoint {
+      display: none !important;
+    }
+
+    .input-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      min-height: 56px;
+      padding: 0 20px;
+      border-bottom: 2px solid colors.$button-bg;
+
+      .input {
+        flex: 1;
+        padding: 0 8px;
+
+        &::placeholder {
+          color: colors.$footer-text;
+        }
+      }
+    }
+  }
+
+  .desktop-search-input {
+    position: relative;
+    display: none;
+    width: 100%;
+    background-color: colors.$white;
+    border-radius: 42px;
+
+    @include responsive.breakpoint {
+      display: flex;
+    }
+
+    .input-container {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      padding: 20px 24px;
+
+      .input {
+        flex: 1;
+        margin-left: 12px;
+        font-size: 1.125rem;
+
+        &::placeholder {
+          color: colors.$footer-text;
+        }
+      }
+    }
+
+    .button {
+      flex: none;
+      padding: 18px 32px;
+      font-size: 1.125rem;
+      font-weight: 700;
+      line-height: 1.6;
+      color: colors.$white;
+      cursor: pointer;
+      background-color: colors.$button-bg;
+      border-radius: 0 42px 42px 0;
+    }
+  }
+}

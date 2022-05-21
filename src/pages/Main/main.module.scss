@@ -1,0 +1,131 @@
+@use 'src/styles/mixins/responsive';
+@use 'src/styles/constants/colors';
+
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  min-height: calc(100vh - 120px);
+  padding-top: 80px;
+  padding-bottom: 20px;
+  background-color: colors.$main-bg;
+
+  @include responsive.breakpoint {
+    padding-bottom: 0;
+  }
+
+  .search {
+    width: 95%;
+    margin: 0 auto;
+    text-align: center;
+
+    .title {
+      margin-bottom: 20px;
+      font-size: 1.25rem;
+      font-weight: 700;
+      line-height: 1.6;
+
+      @include responsive.breakpoint {
+        font-size: 2.125rem;
+      }
+    }
+  }
+
+  .subscription {
+    width: 95%;
+    padding: 0 20px;
+    padding: 12px 16px;
+    margin: 0 auto;
+    margin-top: 0;
+    background-color: colors.$white;
+    border-radius: 16px;
+
+    @include responsive.breakpoint {
+      width: 100%;
+      padding: 24px 0 16px;
+      margin-top: 224px;
+      background-color: colors.$subscription-bg;
+      border-radius: 0;
+    }
+
+    .content {
+      position: relative;
+      display: flex;
+      width: 100%;
+
+      @include responsive.breakpoint {
+        position: relative;
+        max-width: 700px;
+        margin: 0 auto;
+      }
+
+      .description {
+        .desc {
+          margin-bottom: 16px;
+          font-size: 0.875rem;
+          font-weight: 400;
+          line-height: 1.4rem;
+
+          @include responsive.breakpoint {
+            font-size: 1.125rem;
+            font-weight: 700;
+            line-height: 1.6rem;
+            color: colors.$white;
+          }
+        }
+
+        .button {
+          display: inline-flex;
+          padding: 6px 16px;
+          font-size: 0.875rem;
+          font-weight: 400;
+          line-height: 1.6;
+          color: colors.$white;
+          background-color: colors.$button-bg;
+          border-width: 0;
+          border-radius: 24px;
+
+          @include responsive.breakpoint {
+            padding: 10px 24px;
+            font-size: 1rem;
+            color: colors.$button-bg;
+            background-color: colors.$white;
+          }
+        }
+
+        .wordbreak {
+          display: block;
+          color: colors.$button-bg;
+
+          @include responsive.breakpoint {
+            display: inline;
+            color: colors.$white;
+          }
+        }
+      }
+
+      .image {
+        display: none;
+
+        @include responsive.breakpoint {
+          position: absolute;
+          right: 0;
+          bottom: -23px;
+          display: block;
+        }
+      }
+
+      .image-sm {
+        position: absolute;
+        top: -5%;
+        right: -14px;
+        bottom: 0;
+
+        @include responsive.breakpoint {
+          display: none;
+        }
+      }
+    }
+  }
+}

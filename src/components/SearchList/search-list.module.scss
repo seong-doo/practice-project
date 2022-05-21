@@ -1,0 +1,64 @@
+@use 'src/styles/constants/colors';
+
+@mixin list-item {
+  &::before {
+    font-size: 13px;
+    line-height: 1.6;
+    color: colors.$footer-bg;
+    content: '추천 검색어';
+  }
+
+  .while-searching {
+    padding: 8px 0;
+  }
+
+  .item {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 8px 5px;
+    cursor: pointer;
+
+    &:focus {
+      background-color: colors.$border-color;
+    }
+
+    .name {
+      margin-left: 12px;
+      font-size: 1rem;
+      line-height: 1.6;
+
+      mark {
+        font-weight: bold;
+        background-color: transparent;
+      }
+    }
+  }
+}
+
+.mobile-list-container {
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  padding: 20px;
+  overflow: auto;
+
+  @include list-item;
+}
+
+.desktop-list-container {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  max-height: 12rem;
+  padding: 24px 24px 16px;
+  margin-top: 8px;
+  overflow: auto;
+  background-color: colors.$white;
+  border-radius: 20px;
+
+  @include list-item;
+}

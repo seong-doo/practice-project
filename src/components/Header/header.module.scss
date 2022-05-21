@@ -1,0 +1,77 @@
+@use 'src/styles/mixins/responsive';
+@use 'src/styles/constants/colors';
+
+.header {
+  position: static;
+  width: 100%;
+  height: 56px;
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    padding: 0 20px;
+    margin: 0 auto;
+
+    @include responsive.breakpoint {
+      max-width: 1040px;
+    }
+
+    .logo {
+      height: 24px;
+      cursor: pointer;
+    }
+
+    .mobile-nav {
+      display: flex;
+
+      @include responsive.breakpoint {
+        display: none;
+      }
+
+      .list {
+        position: absolute;
+        top: 56px;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding-bottom: 8px;
+        background-color: colors.$white;
+
+        .item {
+          width: 100%;
+          padding: 8px 0;
+          font-size: 1rem;
+          line-height: 1.6;
+          text-align: center;
+          cursor: pointer;
+
+          &:first-child {
+            border-bottom: 1px solid colors.$border-color;
+          }
+        }
+      }
+    }
+
+    .desktop-nav {
+      display: none;
+
+      @include responsive.breakpoint {
+        display: flex;
+      }
+
+      .button {
+        padding: 8px 16px;
+        margin: 10px;
+        font-size: 1rem;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}

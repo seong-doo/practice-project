@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/static/css/main.e2e4a23c.css",
+    "main.js": "/static/js/main.b32e45df.js",
+    "static/media/subscription-image-sm.svg": "/static/media/subscription-image-sm.8d90ddfae4434536ee8882567ddad0b8.svg",
+    "static/media/subscription-image.svg": "/static/media/subscription-image.2c608a70964c3e4a63779cef0307bb77.svg",
+    "static/media/main-logo.svg": "/static/media/main-logo.9f995f3c3ecc37fe3b2a2dce4220ff31.svg",
+    "static/media/kids-logo.webp": "/static/media/kids-logo.2680f69661a1a13c0f40.webp",
+    "index.html": "/index.html",
+    "static/media/magnifier-icon.svg": "/static/media/magnifier-icon.aa2c32102aa727289be1408989ad202d.svg",
+    "static/media/hamburger-button-icon.svg": "/static/media/hamburger-button-icon.68940d84fb33aa91e8bee324202cfecd.svg",
+    "static/media/left-arrow-icon.svg": "/static/media/left-arrow-icon.46b03c5382529cea469d86a61966fe5d.svg",
+    "main.e2e4a23c.css.map": "/static/css/main.e2e4a23c.css.map",
+    "main.b32e45df.js.map": "/static/js/main.b32e45df.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e2e4a23c.css",
+    "static/js/main.b32e45df.js"
+  ]
+}
